@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="485.0" prefWidth="664.0" stylesheets="@reunion.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.applicationgestionsyndic.Controllers.ReunionController">
+   <children>
+      <AnchorPane layoutX="8.0" layoutY="14.0" prefHeight="290.0" prefWidth="777.0" stylesheets="@reunion.css">
+         <styleClass>
+            <String fx:value="white-bg" />
+            <String fx:value="shadow" />
+         </styleClass>
+         <children>
+            <TableView fx:id="reunion_tableView" layoutX="25.0" layoutY="69.0" prefHeight="227.0" prefWidth="704.0">
+               <columns>
+                  <TableColumn fx:id="ReunionIdColumn" prefWidth="74.0" text="Reunion Id" />
+                  <TableColumn fx:id="ReunionDateColumn" prefWidth="125.0" text="Date" />
+                  <TableColumn fx:id="ReunionTitleColumn" prefWidth="172.0" text="Titre" />
+                  <TableColumn fx:id="ReunionReportColumn" prefWidth="148.0" text="Report" />
+                  <TableColumn fx:id="ReunionFinalDecisionColumn" prefWidth="184.0" text="Decission final" />
+               </columns>
+            </TableView>
+            <TextField fx:id="Reunion_search" layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="277.0" promptText="Seach" styleClass="search" stylesheets="@reunion.css" text="Recherche" />
+            <Button fx:id="imprimer_invitation" layoutX="592.0" layoutY="8.0" mnemonicParsing="false" onAction="#print" prefHeight="42.0" prefWidth="174.0" styleClass="update-btn" stylesheets="@reunion.css" text="imprimer invitation" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="21.0" layoutY="356.0" text="Date">
+         <font>
+            <Font name="Tahoma" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="394.0" text="Title">
+         <font>
+            <Font name="Tahoma" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ReunionTitle" layoutX="115.0" layoutY="391.0" prefHeight="25.0" prefWidth="147.0" styleClass="textfield" stylesheets="@reunion.css" />
+      <Label layoutX="21.0" layoutY="322.0" text="Corpropriete">
+         <font>
+            <Font name="Tahoma" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="addReunion_addBtn" layoutX="634.0" layoutY="434.0" mnemonicParsing="false" onAction="#AddReunion" prefHeight="41.0" prefWidth="94.0" styleClass="add-btn" stylesheets="@reunion.css" text="ajouter " />
+      <Button fx:id="addReunion_updateBtn" layoutX="520.0" layoutY="434.0" mnemonicParsing="false" onAction="#UpdateReunion" prefHeight="41.0" prefWidth="94.0" styleClass="update-btn" stylesheets="@reunion.css" text="modifier " />
+      <Button fx:id="addReunion_deleteBtn" layoutX="405.0" layoutY="434.0" mnemonicParsing="false" onAction="#DeleteReunion" prefHeight="41.0" prefWidth="94.0" styleClass="delete-btn" stylesheets="@reunion.css" text="supprimer " />
+      <Button fx:id="addReunion_clearBtn" layoutX="282.0" layoutY="434.0" mnemonicParsing="false" onAction="#ClearInputs" prefHeight="41.0" prefWidth="94.0" styleClass="clear-btn" stylesheets="@reunion.css" text="clean " />
+      <Label layoutX="369.0" layoutY="322.0" text="Agenda">
+         <font>
+            <Font name="Tahoma" size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="ReunionAgenda" layoutX="433.0" layoutY="316.0" prefHeight="75.0" prefWidth="325.0" styleClass="textfield" stylesheets="@reunion.css" />
+      <DatePicker fx:id="DateReunion" layoutX="115.0" layoutY="353.0" prefHeight="25.0" prefWidth="146.0" />
+      <ChoiceBox fx:id="Corpropriete" layoutX="114.0" layoutY="319.0" prefWidth="150.0" />
+   </children>
+   <styleClass>
+      <String fx:value="white-bg" />
+      <String fx:value="shadow" />
+   </styleClass>
+</AnchorPane>

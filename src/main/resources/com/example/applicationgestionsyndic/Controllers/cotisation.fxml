@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="483.0" prefWidth="664.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.applicationgestionsyndic.Controllers.cotisaController">
+   <children>
+      <AnchorPane fx:id="CotisationsIn" layoutX="10.0" layoutY="10.0" prefHeight="457.0" prefWidth="664.0">
+         <children>
+            <Pane layoutX="3.0" prefHeight="55.0" prefWidth="657.0" style="-fx-background-color: #C0C0C0;">
+               <children>
+                  <Label layoutX="142.0" layoutY="-4.0" prefHeight="63.0" prefWidth="105.0" text=": COTISATIONS" />
+                  <Label layoutX="247.0" layoutY="4.0" prefHeight="46.0" prefWidth="70.0" text="2023">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="ajouterC_btn" layoutX="445.0" layoutY="10.0" mnemonicParsing="false" onAction="#addCanonisation" prefHeight="36.0" prefWidth="84.0" style="-fx-background-color: #66CDAA;" text="Ajouter" textFill="#fffcfc">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Button>
+                  <Label alignment="CENTER" layoutX="14.0" layoutY="-1.0" prefHeight="58.0" prefWidth="119.0" text="IMMEUBLE" textFill="#25a7f2">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="8.0" layoutY="66.0" prefHeight="58.0" prefWidth="636.0" style="-fx-background-color: #2C3539;">
+               <children>
+                  <Button fx:id="gobtn2" layoutX="526.0" layoutY="10.0" mnemonicParsing="false" onAction="#addCotisationhowListData" prefHeight="34.0" prefWidth="96.0" style="-fx-background-color: #66CDAA;" text="GO" textFill="#fffcfc">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <ChoiceBox fx:id="coproId2" layoutX="158.0" layoutY="11.0" prefHeight="36.0" prefWidth="321.0" />
+                  <Label layoutX="34.0" layoutY="12.0" prefHeight="31.0" prefWidth="96.0" text="Corpropriété ID" textFill="WHITE" />
+               </children>
+            </Pane>
+            <TableView fx:id="tableCotisation" layoutX="33.0" layoutY="132.0" prefHeight="281.0" prefWidth="597.0">
+               <columns>
+                  <TableColumn fx:id="cotisationID" prefWidth="82.00003051757812" text="Cotisation ID" />
+                  <TableColumn fx:id="uniteID" minWidth="0.0" prefWidth="67.33334350585938" text="Unite ID" />
+                  <TableColumn fx:id="datePayCot" minWidth="0.0" prefWidth="102.0" text="Date de Paiment" />
+                  <TableColumn fx:id="DRMcotisation" prefWidth="110.0" text="Dernier mois payé " />
+                  <TableColumn fx:id="nbrmoisCotisation" minWidth="0.0" prefWidth="138.0" text="Nombre de mois payés " />
+                  <TableColumn fx:id="montantCotisation" prefWidth="96.0" text="Montant" />
+               </columns>
+            </TableView>
+            <Pane layoutX="405.0" layoutY="413.0" prefHeight="36.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="7.0" layoutY="6.0" mnemonicParsing="false" onAction="#modifier" style="-fx-background-color: #0D5DF1;" text="Modifier" textFill="WHITE" />
+                  <Button layoutX="82.0" layoutY="5.0" mnemonicParsing="false" onAction="#DeleteCotisation" style="-fx-background-color: #FA2020;" text=" Supprimer" textFill="WHITE" />
+               </children>
+            </Pane>
+            <Label layoutX="23.0" layoutY="418.0" prefHeight="31.0" prefWidth="63.0" text="TOTAL" textFill="#c71111">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="total2" disable="true" editable="false" layoutX="86.0" layoutY="419.0" prefHeight="25.0" prefWidth="84.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="AddCotisationIn" layoutX="10.0" layoutY="10.0" prefHeight="457.0" prefWidth="657.0" visible="false">
+         <children>
+            <Pane layoutX="26.0" layoutY="17.0" prefHeight="464.0" prefWidth="657.0" style="-fx-background-color: #C0C0C0;" AnchorPane.bottomAnchor="-7.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label fx:id="immeublename" alignment="CENTER" layoutX="34.0" layoutY="22.0" prefHeight="58.0" prefWidth="119.0" text="IMMEUBLE" textFill="#25a7f2">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="153.0" layoutY="26.0" prefHeight="49.0" prefWidth="181.0" text="NOUVELLE COTISATIONS" textFill="#090908">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="27.0" layoutY="96.0" prefHeight="339.0" prefWidth="610.0" style="-fx-background-color: #686A6C;">
+               <children>
+                  <ChoiceBox fx:id="corpoChoichbox" layoutX="11.0" layoutY="37.0" prefHeight="32.0" prefWidth="271.0" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="75.0" prefHeight="22.0" prefWidth="132.0" text="DATE DE PAIEMENT" textFill="#fbfbfb">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="305.0" layoutY="75.0" prefHeight="22.0" prefWidth="132.0" text="DERNIER MOIS PAYE" textFill="#fbfbfb">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="149.0" prefHeight="22.0" prefWidth="166.0" text=" NOMBRE DE MOIS PAYÉ(S)" textFill="#fbfbfb">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="305.0" layoutY="149.0" prefHeight="22.0" prefWidth="208.0" text="MONTANT PAYE" textFill="#fbfbfb">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nbrCotisation" layoutX="11.0" layoutY="186.0" prefHeight="32.0" prefWidth="271.0" style="-fx-background-color: #F9FAFA;" />
+                  <TextField fx:id="MontantCotisation" layoutX="305.0" layoutY="186.0" prefHeight="32.0" prefWidth="271.0" style="-fx-background-color: #F9FAFA;" />
+                  <Button fx:id="EnregCotisation" layoutX="210.0" layoutY="240.0" mnemonicParsing="false" onAction="#addCanonisation" prefHeight="41.0" prefWidth="166.0" style="-fx-background-color: #3EA055;" text="ENREGISTRER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <ChoiceBox fx:id="uniteChoicbox" layoutX="302.0" layoutY="37.0" prefHeight="32.0" prefWidth="271.0" />
+                  <DatePicker fx:id="DateCotisation" layoutX="15.0" layoutY="107.0" prefHeight="32.0" prefWidth="263.0" />
+                  <TextField fx:id="DerMCotisatin" layoutX="305.0" layoutY="107.0" prefHeight="32.0" prefWidth="271.0" style="-fx-background-color: #F9FAFA;" />
+                  <Label layoutX="31.0" layoutY="6.0" text="CORPROPRIETE_ID" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="305.0" layoutY="6.0" text="UNITE_ID" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

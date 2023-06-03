@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="884.0" stylesheets="@Main.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.applicationgestionsyndic.Controllers.MainController">
+   <children>
+      <VBox prefHeight="535.0" prefWidth="209.0" style="-fx-background-color: #57B28C;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="105.0" prefWidth="223.0">
+               <children>
+                  <Label layoutX="45.0" layoutY="14.0" prefHeight="39.0" prefWidth="133.0" text="GestionSyndic" textFill="#fdfdfd">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button id="tableaudebord_btn" fx:id="tabBord_btn" mnemonicParsing="false" onAction="#SwitchPage" prefHeight="39.0" prefWidth="237.0" style="-fx-background-color: #117D4F;" text="Tableau de bord" textFill="WHITE">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button id="reunions_btn" fx:id="reunions_btn" mnemonicParsing="false" onAction="#SwitchPage" prefHeight="39.0" prefWidth="237.0" style="-fx-background-color: #117D4F;" text="Réunions" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button id="copro_btn" fx:id="copro_btn" mnemonicParsing="false" onAction="#SwitchPage" prefHeight="39.0" prefWidth="237.0" style="-fx-background-color: #117D4F;" text="Corpropriété" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button id="unite_btn" fx:id="unite_btn" mnemonicParsing="false" onAction="#SwitchPage" prefHeight="39.0" prefWidth="237.0" style="-fx-background-color: #117D4F;" text="Unité" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button id="cotisations_btn" fx:id="cotisation_btn" mnemonicParsing="false" onAction="#SwitchPage" prefHeight="39.0" prefWidth="233.0" style="-fx-background-color: #117D4F;" text="Cotisations" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button id="depenses_btn" fx:id="depenses_btn" mnemonicParsing="false" onAction="#SwitchPage" prefHeight="39.0" prefWidth="237.0" style="-fx-background-color: #117D4F;" text="Dépenses" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Line endX="120.62620544433594" endY="-0.8689231872558594" startX="-100.0" stroke="#fbf7f7" />
+            <Button id="deconnexion_btn" fx:id="dec_btn" mnemonicParsing="false" prefHeight="39.0" prefWidth="237.0" style="-fx-background-color: #117D4F;" text=" Deconnexion" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <Pane layoutX="220.0" layoutY="10.0" prefHeight="52.0" prefWidth="664.0" style="-fx-background-color: #57B28C;" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <BorderPane fx:id="mainContainer" layoutX="220.0" layoutY="52.0" prefHeight="485.0" prefWidth="664.0" />
+   </children>
+</AnchorPane>

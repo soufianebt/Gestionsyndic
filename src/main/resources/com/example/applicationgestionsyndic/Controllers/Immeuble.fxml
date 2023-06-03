@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #514c4c;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.applicationgestionsyndic.Controllers.CorproprieteController">
+   <children>
+      <Pane fx:id="gestion" layoutX="5.0" layoutY="5.0" prefHeight="59.0" prefWidth="680.0" style="-fx-background-color: #AFD8F0;" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <Label layoutX="30.0" layoutY="16.0" text="GESTION DES IMMEUBLES">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="supprimer" layoutX="472.0" layoutY="12.0" mnemonicParsing="false" onAction="#SupprimerClicked" style="-fx-background-color: #860505;" text="Supprimer" textFill="#fcfcfc">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="ajouter" layoutX="384.0" layoutY="12.0" mnemonicParsing="false" onAction="#ajouterCliked" style="-fx-background-color: #2d6135;" text="Ajouter" textFill="#f2f2f2">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="modifier" layoutX="578.0" layoutY="12.0" mnemonicParsing="false" onAction="#modifierClicked" style="-fx-background-color: #183b7c;" text="Modiffier" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Label fx:id="lb_immeuble" contentDisplay="CENTER" layoutX="8.0" layoutY="129.0" prefHeight="30.0" prefWidth="140.0" text="NOM de l'immeuble" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_immeuble" layoutX="211.0" layoutY="131.0" promptText="nom de l'immeuble" AnchorPane.leftAnchor="211.0" AnchorPane.rightAnchor="340.0" AnchorPane.topAnchor="135.0" />
+      <TextField fx:id="txt_adresse" layoutX="207.0" layoutY="238.0" prefHeight="25.0" prefWidth="149.0" promptText="adresse" />
+      <Label fx:id="lb_ville" contentDisplay="CENTER" layoutX="8.0" layoutY="205.0" prefHeight="30.0" prefWidth="140.0" text="Ville " textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb_adresse" contentDisplay="CENTER" layoutX="8.0" layoutY="235.0" prefHeight="30.0" prefWidth="140.0" text="Adresse" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableView" layoutX="11.0" layoutY="340.0" prefHeight="146.0" prefWidth="688.0" style="-fx-background-color: #fce3fa;">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="59.0" text="id" />
+          <TableColumn fx:id="nameColumn" prefWidth="107.0" text="Nom " />
+            <TableColumn fx:id="villeColumn" minWidth="6.0" prefWidth="147.0" text="Ville" />
+            <TableColumn fx:id="adrColumn" minWidth="0.0" prefWidth="111.0" text="Adresse" />
+            <TableColumn fx:id="cotisationColumn" minWidth="8.0" prefWidth="178.0" text="Cotisation" />
+            <TableColumn fx:id="nbrUnitéColumn" minWidth="8.0" prefWidth="81.0" text="nbr d'unité" />
+        </columns>
+      </TableView>
+      <Label fx:id="lb_cotisation" contentDisplay="CENTER" layoutY="267.0" prefHeight="30.0" prefWidth="140.0" text=" Cotisation" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_cotisation" layoutX="206.0" layoutY="270.0" promptText="montant de la cotisation" />
+      <Label fx:id="lb_disponible" contentDisplay="CENTER" layoutX="8.0" layoutY="301.0" prefHeight="30.0" prefWidth="140.0" text="Montant disponible" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_disponible" layoutX="206.0" layoutY="304.0" prefHeight="25.0" prefWidth="149.0" promptText="montant disponible" />
+      <Label fx:id="lb_unité" contentDisplay="CENTER" layoutX="8.0" layoutY="168.0" prefHeight="30.0" prefWidth="140.0" text="Nbr d'unité" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_unité" layoutX="211.0" layoutY="171.0" prefHeight="25.0" prefWidth="149.0" promptText="nbr d'unité" />
+      <TextField fx:id="txt_Ville" layoutX="211.0" layoutY="208.0" prefHeight="25.0" prefWidth="149.0" promptText="Ville " AnchorPane.topAnchor="206.0" />
+      <Button fx:id="go" layoutX="634.0" layoutY="171.0" mnemonicParsing="false" onAction="#clickGo" text="GO" />
+   </children>
+</AnchorPane>
